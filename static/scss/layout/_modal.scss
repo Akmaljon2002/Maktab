@@ -1,0 +1,138 @@
+.regst{
+    background-color: #213245;
+    top: 60px;
+    right: 0;
+    z-index: 2;
+    display: none;
+    position: fixed;
+    width: 20vw;
+    padding: 10px 0;
+    color: #fff;
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+    }
+    &__modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: slidemodal 5s linear;
+        h3{
+            font-size: 25px;
+            font-weight: 600;
+            color: red;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+        }
+
+    }
+    .forma{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        input{
+            width: 200px;
+            outline: none;
+            padding: 2px 2px;
+        }
+    }
+    &__inp{
+        &-btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .chekout{
+                margin: 10px 0;
+            }
+        }
+
+    }
+}
+.regst__top{
+    background-color: #213245;
+    top: 80px;
+    right: 0;
+    z-index: 2;
+    display: none;
+    position: fixed;
+    width: 20vw;
+    padding: 20px 0;
+    color: #fff;
+    .close{
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+    }
+    &__modal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: slidemodal 5s linear;
+        h3{
+            font-size: 25px;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 600;
+            color: red;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 16px;
+        }
+
+    }
+    .forma{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // width: 250px;
+        label{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        input{
+            width: 200px;
+            outline: none;
+            padding: 2px 2px;
+        }
+    }
+    &__inp{
+        &-btn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .chekout{
+                margin: 10px 0;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+@keyframes slidemodal{
+    0%{
+        right: 0;
+    }
+    10%{
+        right: 10px;
+    }
+}

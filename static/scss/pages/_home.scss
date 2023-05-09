@@ -1,0 +1,345 @@
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 20s linear infinite;
+    .load{
+        animation: slide 2s;
+    }
+    .content{
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+
+    }
+}
+.miniNews{
+    h1{
+        text-align: center;
+        margin: 50px 0;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #213245 ;
+    }
+    &__title{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 10px;
+        .card {
+            position: relative;
+            max-width: 20em;
+            margin: 2rem auto;
+            padding: 2em;
+            background: #fff;
+          }
+          
+          .card__title {
+            margin: 0 auto 1em;
+            color: #333;
+            text-align: center;
+            text-transform: capitalize;
+          }
+          
+          .card__img {
+            display: block;
+            width: 20em;
+            max-width: 100%;
+            margin: 1em auto;
+            border-radius: 2px;
+          }
+          
+          .card__text {
+            margin: 2em 5%;
+            color: #646464;
+          }
+          
+          .card__btn {
+            display: table;
+            padding: .7em 4em;
+            background: #ddba76;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 1em auto 0;
+          }
+          
+          
+          
+          /**
+           * Card #14
+           */
+          
+          .card--14 {
+          
+            overflow: hidden;
+            transition: all .3s;
+          
+            .card__text,
+            .card__title,
+            .card__img,
+            .card__btn {
+              transition: all .3s ease-in-out;
+            }
+          
+            &:hover {
+          
+              background-color: transparent;
+              background-image: url('/img/photo_2022-11-24_17-56-03.jpg');
+              background-size: cover;
+              background-position: center;
+          
+              .card__title {
+                color: #fff;
+                transform: translate3d(0,120px,0) scale(1.5);
+              }
+          
+              .card__text {
+                color: #fff;
+                transform: translate3d(0,-120px,0) scale(1.2);
+              }
+          
+              .card__btn {
+                transform: translate3d(0,-120px,0);
+                background: white;
+                color: #333;
+              }
+          
+              .card__img {
+                opacity: 0;
+                transform: scale(0);
+              }
+          
+            }
+          }
+          
+
+    }
+}
+.inform{
+  background-color: #DBDBDB;
+  padding: 80px 0;
+  h1{
+    text-align: center;
+    color: #213245;
+    font-family: 'Roboto Mono', monospace;
+    padding-bottom: 50px;
+
+  }
+  .top{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    .inform-items{
+      margin: 0 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 100%;
+      }
+      &-title{
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        color: #fff;
+        background-color: #333;
+        opacity: .7;
+        img{
+          width: 70px;
+          text-align: center;
+        }
+        h2{
+          padding: 20px 0;
+
+        }
+
+      }
+
+      
+
+    }
+  }
+}
+.foot{
+  background-color: #213245;
+  .container{
+    padding: 80px 0;
+    .logotip{
+      img{
+        padding-bottom: 50px;
+        width: 300px;
+      }
+    }
+    .foot__items{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      &-title{
+        h2{
+          color: #fff;
+          font-family: 'Roboto Mono', monospace;
+          text-transform: uppercase;
+          font-size: 18px;
+          padding-left: 30px;
+        }
+        &-app{
+          display: flex;
+          align-items: center;
+          margin: 20px 0;
+          max-width: 190px;
+          background-color: #000;
+          border-radius: 5px;
+          margin-left: 30px;
+
+          img{
+            padding: 0 10px;
+          }
+          .h5{
+            padding-left: 5px;
+          }
+          h5{
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            font-size: 16px;
+            span{
+              font-size: 8px;
+            }
+          }
+        }
+        &:nth-child(2){
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 2px;
+            height: 100%;
+            background-color: #D5C2A6;
+          }
+          &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 2px;
+            height: 100%;
+            background-color: #D5C2A6;
+          }
+        }
+        ul{
+          li{
+            padding: 8px 0;
+            a{
+              color: #fff;
+              font-family: 'Roboto Mono', monospace;
+              text-transform: uppercase;
+              font-size: 15px;
+              span{
+                padding-left: 10px;
+              }
+            }
+          }
+        }
+        &-tip{
+          .btn{
+            color: #333;
+            background-color: #ddba76;
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            width: 90%;
+            font-size: 20px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+          }
+          p{
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+          .mail{
+            width: 90%;
+            display: flex;
+            input{
+              border: none;
+              outline: none;
+              padding: 10px 5px;
+            }
+            button{
+              color: #333;
+              background-color: #ddba76;
+              font-family: 'Roboto Mono', monospace;
+              text-transform: uppercase;
+              font-size: 14px;
+              border: none;
+              
+            }
+          }
+        }
+
+      }
+
+    }
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide {
+    0%{
+        background-image: url('/img/PIIM1.jpg');
+    }
+    20%{
+        background-image: url('/img/PIIM1.jpg');
+    }
+    25%{
+        background-image: url('/img/PIIM2.jpg');
+    }
+    40%{
+        background-image: url('/img/PIIM2.jpg');
+    }
+    45%{
+        background-image: url('/img/PIIM3.jpg');
+
+    }
+    60%{
+        background-image: url('/img/PIIM3.jpg');
+    }
+    65%{
+        background-image: url('/img/PIIM4.jpg');
+    }
+    80%{
+        background-image: url('/img/PIIM4.jpg');
+    }
+    85%{
+        background-image: url('/img/PIIM5.jpg');
+
+    }
+    100%{
+        background-image: url('/img/PIIM5.jpg');
+    }
+}

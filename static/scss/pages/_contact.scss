@@ -1,0 +1,69 @@
+.contact{
+    padding: 150px 0;
+    &__title{
+        display: flex;
+        justify-content: space-evenly;
+        &-items{
+            max-width: 600px;
+            padding: 50px;
+            background-color: #F3F3F3;
+            h4{
+                color: #2B385D;
+                font-size: 16px;
+                margin-bottom: 1rem;
+            }
+            .pages{
+                padding-bottom: 50px;
+            }
+            &-transp{
+                padding-bottom: 50px;
+            }
+            &-aloqa{
+                padding-bottom: 50px;
+
+            }
+            &-text{
+
+            }
+
+        }
+        &-inp{
+            background-color: #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            input{
+                outline: none;
+                border-radius: 8px;
+                border: 1px solid #9999;
+                margin-bottom: 15px;
+            }
+
+            h2{
+                color: #051b57;
+                background-color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+            
+
+        }
+    }
+    &__btn{
+        margin: 40px 70px;
+        
+        .text-right{
+            text-align: right !important;
+            .btn-more{
+                cursor: pointer;
+                border-radius: 0;
+                background-color: #d5c2a6;
+                font-size: 24px;
+                line-height: 1.15;
+                padding: 10px 32px;
+                color: #2b385d;
+            }
+        }
+    }
+}

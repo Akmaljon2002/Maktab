@@ -1,0 +1,476 @@
+ 
+.statistics{
+    padding: 120px 0;
+    
+    #subheader{
+        display: flex;
+        flex-direction: column;
+        
+        .crumbs{
+            padding: 0;
+            width: 75%;
+            li{
+                text-align: left;
+                a{
+                    font-family: 'Kanit', sans-serif;
+                    &:hover{
+                        color: #F8A94D;
+                        
+                    }
+                }
+            }
+            
+
+        }
+        h2{
+            color: #AF69A1;
+            font-family: 'Kanit';
+        }
+        .clear{
+            width: 75%;
+            text-align: right;
+            .toolbar{
+                margin: 0;
+                
+                li{
+                    color: #2291be;
+                    font-size: 1.2em;
+                    a{
+                        font-family: 'Kanit';
+                        &:hover{
+                            color: #F8A94D;
+                            
+                        }
+                        
+                            img{
+                                width: 17px;
+                                height: 17px;
+                            }
+                        
+                    }
+                }
+                .sub{
+                    font-family: 'Kanit';
+                    a:hover{
+                        border-bottom: 2px solid #F8A94D;
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        padding: 0 !important;
+        font-family: 'Kanit';
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        .statistics__sidebar{
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #F4F8FE;
+            width: 75%;
+            padding: 20px 0;
+            margin: 10px 0;
+            .cc{
+                .reports-list{
+                    padding-left: 0;
+                    .blt{
+                        div{
+                            font-size: 1em;
+                            text-align: center;
+                            b{
+                                font-family: 'Kanit';
+                                color: #8f8f91;
+                            }
+                        }
+                        a{
+                            .sub{
+                                b{
+                                    font-family: 'Kanit';
+                                    color: #2291be;
+                                    &:hover{
+                                        color: #F8A94D;
+                                        
+                                    }
+                                }
+                            }
+                            &:hover{
+                                color: #F8A94D;
+                                
+                            }
+                        }
+                        ul{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                        }
+                    }
+                    
+                    
+                    
+                }
+                
+            }
+        }
+        .col34{
+            width: 75%;
+            // margin-left: 20px;
+            table{
+
+                tbody{
+                    tr{
+                        &:hover{
+                            background-color: #FFEAAA;
+                        }
+                        td{
+                            font-size: 13.8px;
+                            padding: 4px 8px;
+                            border: 1px solid #ddd;
+                            vertical-align: middle
+                        }
+                    }
+                }
+            }
+            .panel{
+
+                .rounded{
+                    border: 1px solid #ddd;
+                    border-radius: 50px;
+                    background-color: #F4F8FE;
+                    .cc{
+                        padding: 8px;
+                        .formSearch{
+                            .row2{
+                                
+                                display: flex;
+                                margin-bottom: 5px;
+                                label{
+                                    font-size: 1em;
+                                    color: #333;
+                                    width: 110px;
+                                }
+                                
+                                .t{
+                                    margin-left: 30px;
+                                }
+                                .f{
+                                    .switch{
+                                        display: flex;
+                                        align-items: center;
+                                        li{
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                    .classes {
+                                        .first{
+                                            a{
+                                                cursor: pointer;
+                                            }
+                                            ul{
+                                                a{
+                                                    cursor: pointer;
+                                                    color: black;
+                                                }
+                                                padding: 0;
+                                               
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .inp{
+                                display: flex;
+                                .rowInline{
+                                    padding: 0 16px 10px 0;
+                                    margin-bottom: 0;
+                                    
+                                    .b{
+                                        display: flex;
+                                        flex-direction: column;
+                                    }
+                                    .t{
+                                        border: 1px solid #ccc;
+                                        outline: none;
+                                        padding: 0 4px;
+                                    }
+                                    .w2{
+                                        width: 300px !important;
+                                    }
+                                    .button{
+                                        font-size: 1em;
+                                        padding: 2px 8px;
+                                        background: #76b9ea;
+                                        border: solid 1px #b8defa;
+                                        border-right-color: #5398cb;
+                                        border-bottom-color: #5398cb;
+                                        color: #fff;
+                                    }
+                                }
+                                .last{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: end;
+                                }
+                            }
+                            
+                            
+                        }
+                        .formBuildReport{
+                            .button{
+                                font-size: 1em;
+                                padding: 2px 8px;
+                                background: #76b9ea;
+                                border: solid 1px #b8defa;
+                                border-right-color: #5398cb;
+                                border-bottom-color: #5398cb;
+                                color: #fff;
+                            }
+                        }
+                        .row2{
+                            display: flex;
+
+                            label{
+                                font-size: .9em;
+                                color: #333;
+                                width: 110px;
+                            }
+                            div{
+                                display: flex;
+                                .switch{
+                                    display: flex;
+                                    align-items: center;
+                                    li{
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .classes {
+                                    display: flex;
+                                    align-items: center;
+                                    
+                                    li{
+                                        
+                                        ul{
+                                            padding: 0;
+                                            // margin-left: 10px;
+                                            li{
+                                                a{
+                                                    color: black;
+                                                    box-shadow: inset 0 0 0 0 blue;
+                                                    padding: 0 .25rem;
+                                                    margin: 0 -.25rem;
+                                                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                                                    &:hover{
+                                                        color: #fff;
+                                                        box-shadow: inset 200px 0 0 0 blue;;
+                                                    }
+                                                }
+                                                .green{
+                                                    box-shadow: inset 0 0 0 0 green;
+                                                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                                                    &:hover{
+                                                        color: #fff;
+                                                        box-shadow: inset 200px 0 0 0 green;
+                                                    }
+                
+                                                }
+                                            }
+                                            .hr2{
+                                                width: auto;
+                                                height: 2px;
+                                                margin: 5px 0;
+                                            }
+                                            
+                                        }
+                                    }
+                                     .hr1{
+                                        width: 2px;
+                                        height: 40px;
+                                        margin: 0 10px;
+                                    }
+                                   
+                                }
+                                .parallels{
+                                    display: flex;
+                                    margin: 0;
+                                    li{
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: 0 10px;
+
+                                        .parallels-label{
+                                            width: fit-content;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        form{
+                            text-align: right;
+                            div{
+                                .button{
+                                    font-size: 1em;
+                                    padding: 2px 8px;
+                                    background: #32A1CE;
+                                    border: solid 1px #b8defa;
+                                    border-radius: 8px;
+                                    color: #fff;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+            .grid{
+                border-radius: 8px;
+                margin-top: 20px;
+                tbody{
+                    tr{
+                        th{
+                            border: solid 1px #ddd;
+                            text-align: center;
+                            background-color: #ecf2f9;
+                            font-size: 80%;
+                            color: #666;
+                        }
+                        td{
+                            .u{
+                                color: #8CAF31;
+                                &:hover{
+                                    color: #F8A94D;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #reportPlaceHolder{
+                // display: none;
+                margin-top: 20px;
+                div{
+                    font-size: 0.9em;
+
+                }
+                .grid{
+                    margin-top: 10px;
+                    thead{
+                        tr{
+                            // height: 150px;
+                            th{
+                                color: #666;
+                                font-size: 90%;
+                                font-weight: normal;
+                                // padding: 4px 0;
+                                text-align: center;
+                                border: solid 1px #ddd;
+                                background-color: #ecf2f9;
+                            }
+                            td{
+                            }
+                            .rotated-td{
+                                border: solid 1px #ddd;
+                                padding: 4px 8px;
+                                vertical-align: middle;
+                                .rotated-word{
+                                    font-size: 0.9em;
+                                    white-space: nowrap;
+                                    display: inline-block;
+                                    line-height: 15px;
+                                    position: relative;
+                                    bottom: -50px;
+                                    width: 10px;
+                                    max-height: 30px;
+                                    -webkit-transform: rotate(-90deg);
+                                }
+                            }
+                            .sortable{
+                                color: #2291be;
+                                cursor: pointer;
+                            }
+                            .inverse{
+                                background-color: #88a9d0;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    tfoot{
+                        tr{
+                            td{
+                                font-size: 0.9em;
+                                background-color: #eee;
+                                border: solid 1px #ddd;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            .taci{
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                #resultsTable{
+                    thead{
+                        tr{
+                            height: 150px;
+
+                            th{
+                                padding: 0 10px;
+
+                            }
+                            .rotated-td{
+                                vertical-align: middle;
+                                text-align: center;
+                                .rotated-word{
+                                    white-space: nowrap;
+                                    display: inline-block;
+                                    line-height: 15px;
+                                    position: relative;
+                                    bottom: -50px;
+                                    width: 10px;
+                                    -webkit-transform: rotate(-90deg);
+                                }
+                            }
+                            .sortable {
+                                color: #2291be;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    tfoot{
+                        .strong{
+                            font-weight: bold;
+                            td{
+                                border: solid 1px #ddd;
+                                font-size: 0.9em;
+                            }
+                            .inverse{
+                                background-color: #eee;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        th{
+                            // padding: 4px 0;
+                        }
+                        .inverse{
+                            background-color: #eee;
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+}

@@ -1,0 +1,356 @@
+.journal{
+    padding: 150px 0;
+    background-color: rgb(214, 213, 213);
+    height: 100vh;
+    
+    .container{
+        a{
+            color: #2291be;
+            &:hover{
+                color: #EB8601;
+            }
+        }
+        #subheader{
+            .crumbs{
+                padding: 0;
+                li{
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+            h2{
+                font-size: 1.6em;
+                color: #af69a1;
+            }
+        }
+        .tabs{
+            display: block;
+            min-height: 28px;
+            ul{
+                padding: 0;
+                li{
+                    float: left;
+                    position: relative;
+                    top: 1px;
+                    a{
+                        border:  1px solid #dce3e7 !important;
+                        display: block;
+                        font-size: 90%;
+                        line-height: 24px;
+                        padding: 0 12px;
+                    }
+                    
+                }
+               
+                .act{
+                    a{
+                        background-color: #fff;
+                        background-image: linear-gradient(to top, #fff 50%, #fff5eb);
+                        border-bottom: none;
+                        color: #eb8601 !important;
+                        font-weight: bold;
+                    }
+                
+                }
+                
+            }
+            border-bottom: 1px solid #f4fbff;
+        }
+        .class{
+            margin-top: 40px;
+            .classes{
+                display: flex;
+                padding: 0;
+                align-items: center;
+                
+                
+                .tok{
+                    // padding-right: 70px;
+                    ul{
+                        li{
+                            div{
+                                a{
+                                    color: black;
+                                    box-shadow: inset 0 0 0 0 blue;
+                                    padding: 0 .25rem;
+                                    margin: 0 -.25rem;
+                                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                                    &:hover{
+                                        color: #fff;
+                                        box-shadow: inset 200px 0 0 0 blue;;
+                                    }
+                                }
+                                .green{
+                                    box-shadow: inset 0 0 0 0 green;
+                                    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                                    &:hover{
+                                        color: #fff;
+                                        box-shadow: inset 200px 0 0 0 green;
+                                    }
+
+                                }
+                                
+                            }
+                        }
+                        .h2{
+                            width: auto;
+                            height: 2px;
+                            margin: 10px 0;
+                        }
+                    }
+                }
+                .hr1{
+                    width: 2px;
+                    height: 40px;
+                    margin: 0 36px;
+                }
+                
+                ul{
+                    padding: 0;
+                }
+            }
+
+        }
+        .journal__subject{
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            .row2{
+                display: flex;
+                div{
+                    margin-left: 30px;
+                }
+            }
+            form{
+                div{
+                    .button{
+                        font-size: 1em;
+                            padding: 2px 8px;
+                            background: #32A1CE;
+                            border: solid 1px #b8defa;
+                            border-radius: 8px;
+                            color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+.journalItems{
+    padding: 150px 0;
+    
+    .container{
+        .header_journal__panel{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .header_journal__details{
+                div{
+                    #formHeader{
+                        .option_row{
+                            display: flex;
+                            margin: 10px 0;
+                            span{
+                                font-size: 1em;
+                            }
+                            .data{
+                                margin-left: 50px;
+                            }
+                            .subject{
+                                margin-left: 10px;
+                            }
+                            ul{
+                                display: flex;
+                                align-items: center;
+                                margin-left: 10px;
+                                li{
+                                    .active{
+                                        background-color: blue;
+                                        width: fit-content;
+                                        color: #fff;
+                                    }
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .leads{
+                    a{
+                        margin-left: 10px;
+                        color: #8caf31;
+                        font-size: 1em;
+                    }
+                }
+                .m10{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h2{
+                        color: #af69a1;
+                        font-size: 2.2em;
+                    }
+                    h3{
+                        font-size: 1.6em;
+                        color: #666;
+                        margin-bottom: 0px;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+        #classicalJournal{
+            display: flex;
+            // justify-content: center;
+            margin-top: 20px;
+            .classicalJournal__items{
+
+                #main_area{
+                    table{
+                        tbody{
+                            tr{
+                                height: 32px;
+                                td{
+                                    font-size: 12px !important;
+                                    width: 60px;
+                                    text-align: center;
+                                    background-color: #fff;
+                                    span{
+                                        div{
+                                            a{
+                                                color: #FFFFFF;
+                                                font-size: inherit;
+                                                font-weight: bold;
+                                                line-height: 18px;
+                                                padding: 0 2px;
+                                                background-color: #f9a23b;
+                                            }
+                                        }
+                                        input{
+                                            width: 100%;
+                                            border: none;
+                                            outline: none;
+                                            text-align: center;
+                                            font-size: 14px;
+                                        }
+                                    }
+    
+                                }
+                                .mark_v{
+                                    background-color: #ecf2f9;
+                                }
+                               
+                            }
+                        }
+                    }
+                }
+                #left_column{
+                    table{
+                        tbody{
+                            tr{
+                                height: 32px;
+                                .persName {
+                                    padding-left: 10px;
+                                    min-width: 150px;
+                                    .persName-row{
+                                        display: table-row;
+                                        .persName-name-cell{
+                                            display: table-cell;
+                                            width: 100%;
+                                            vertical-align: middle;
+                                            a{
+                                                font-size: 1em;
+                                            }
+                                        }
+                                    }
+                                }
+                                .persN{
+                                    text-align: center;
+                                    min-width: 36px;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+                .countableCell{
+                    tbody{
+                        tr{
+                            height: 32px;
+                            .persName {
+                                text-align: center;
+                                min-width: 192px;
+                                
+                            }
+                            .persN{
+                                text-align: center;
+                                min-width: 36px;
+                            }
+                        }
+                    }
+                }
+    
+                table{
+                    tbody{
+                        tr{
+                            td{
+                                border: 1px solid #BCBCBC;
+                            }
+                            
+                        }
+                    }
+                    thead{
+                        tr{
+                            .total{
+                                color: #666666;
+                                font-size: 80% !important;
+                                font-weight: normal;
+                                padding: 4px 0 !important;
+                                min-width: 60px;
+                                height: 32px;
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+                            th{
+                                border: 1px solid #BCBCBC;
+                                background-color: #ecf2f9;
+                                
+                            }
+                        }
+                    }
+                }
+                div{
+                    table{
+                        tbody{
+                            tr{
+                                td{
+                                    max-height: 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .classcalFirst{
+                display: none;
+            }
+            .classcalTwo{
+                display: none;
+            }
+            .classcalThree{
+                display: none;
+            }
+            .classcalFour{
+                display: none;
+            }
+            .classcalAll{
+                // display: none;
+            }
+
+
+            
+        }
+    }
+}
