@@ -4,5 +4,13 @@ from asosiy.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Bosh_SahifaView.as_view()),
+
+    path('bosh_sahifa/', bosh_sahifa),
+    path('yangliklar/', yangliklar),
+    path('media/', maktab_hayoti),
+    path('jurnal/', journal),
+    path('jurnalitem/', journalitems),
+    path('statistika/', statistika),
+    path('puplis/', puplis),
+    path('contact/', contact),
 ]
