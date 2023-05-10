@@ -5,84 +5,21 @@
 <section class="news">
     <div class="news__items container">
         <div class="news__items-first novelty row" data-aos="fade-left">
+            {% for yangilik in yangiliklar %}
             <div class="novelty__items col-xl-6  ">
                 <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
+                    <img src="{{yangilik.rasm.url}}" alt="">
                 </div>
                 <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
+                    <h2>{{yangilik.sarlavha}}</h2>
+                    <h6>{{yangilik.sana}}</h6>
+                    <a href="/new/{{yangilik.id}}/" class="btn">
                         Batafsil
                     </a>
                 </div>
 
             </div>
-            <div class="novelty__items col-xl-6  ">
-                <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
-                        Batafsil
-                    </a>
-                </div>
-
-            </div>
-            <div class="novelty__items col-xl-6  ">
-                <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
-                        Batafsil
-                    </a>
-                </div>
-
-            </div>
-            <div class="novelty__items col-xl-6  ">
-                <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
-                        Batafsil
-                    </a>
-                </div>
-
-            </div>
-            <div class="novelty__items col-xl-6  ">
-                <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
-                        Batafsil
-                    </a>
-                </div>
-
-            </div>
-            <div class="novelty__items col-xl-6  ">
-                <div class="novelty__items-img">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="novelty__items-title">
-                    <h2>Toshkent Prezident maktabi o‘quvchisi robototexnika yo‘nalishida g‘oli...</h2>
-                    <h6>25.11.2022</h6>
-                    <a href="./newsTitle.html" class="btn">
-                        Batafsil
-                    </a>
-                </div>
-
-            </div>
+            {% endfor %}
 
         </div>
 
@@ -90,10 +27,6 @@
     </div>
 
 </section>
-
-
-
-
 
 
 {% endblock %}

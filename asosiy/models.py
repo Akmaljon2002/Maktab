@@ -40,7 +40,7 @@ class Yangiliklar(models.Model):
     sarlavha = models.CharField(max_length=60)
     matn = models.TextField()
     rasm = models.FileField()
-    sana = models.DateTimeField(auto_now_add=True)
+    sana = models.DateField(auto_now_add=True)
     def __str__(self):
         return self.sarlavha
 
