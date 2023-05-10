@@ -22,3 +22,11 @@ class MediaView(View):
             'medialar': MaktabMedia.objects.all()
         }
         return render(request, 'media.html', data)
+
+class HomeView(View):
+    def get(self, request):
+        data = {
+            "songgilari": Yangiliklar.objects.order_by('-sana')[:4],
+            'malumotlar': Malumot.objects.all()
+        }
+        return render(request, 'index.html', data)

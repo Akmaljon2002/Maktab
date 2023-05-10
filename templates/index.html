@@ -31,7 +31,7 @@
             <a href="#" class="logo"><img src="{% static 'img/6182235a66337.svg' %}" alt=""></a>
             <p>|</p>
             <ul>
-                <li><a href="./index.html">Bosh sahifa
+                <li><a href="/">Bosh sahifa
                 </a></li>
                 <li><a href="./news.html">Yangiliklar
                 </a></li>
@@ -99,29 +99,14 @@
 <section class="miniNews container">
     <h1>So'nggi yangiliklar</h1>
     <div class="miniNews__title">
+        {% for i in songgilari %}
         <div class="card card--14">
-            <h2 class="card__title">Having fun with cards</h2>
-            <img class="card__img" src="{% static 'img/photo_2022-11-24_17-56-03.jpg' %}" alt="">
-            <p class="card__text">I think we don't use background images enough and by enough I mean like the next
-                card</p>
-            <a class="card__btn" href="./newsTitle.html" class="">read</a>
+            <h2 class="card__title">{{ i.sarlavha }}</h2>
+            <img class="card__img" src="{{ i.rasm.url }}" alt="">
+            <p class="card__text">{{ i.matn }}</p>
+            <a class="card__btn" href="/new/{{ i.id }}/" class="">read</a>
         </div>
-        <div class="card card--14">
-            <h2 class="card__title">Having fun with cards</h2>
-            <img class="card__img" src="{% static 'img/photo_2022-11-24_17-56-03.jpg' %}" alt="">
-            <p class="card__text">I think we don't use background images enough and by enough I mean like the next
-                card</p>
-            <a class="card__btn" href="./newsTitle.html" class="">read</a>
-        </div>
-        <div class="card card--14">
-            <h2 class="card__title">Having fun with cards</h2>
-            <img class="card__img" src="{% static 'img/photo_2022-11-24_17-56-03.jpg' %}" alt="">
-            <p class="card__text">I think we don't use background images enough and by enough I mean like the next
-                card</p>
-            <a class="card__btn" href="./newsTitle.html" class="">read</a>
-        </div>
-
-
+        {% endfor %}
     </div>
 </section>
 
@@ -129,41 +114,20 @@
 <section class="inform">
     <h1>Qo'shimcha ma'lumot</h1>
     <div class="container top">
+        {% for malumot in malumotlar %}
         <div class="inform-items">
-            <img src="{% static 'img/l-1.jpg' %}" alt="">
+            <img src="{{ malumot.rasm.url }}" alt="">
             <div class="inform-items-title">
-                <img src="{% static 'img/ovqat.svg' %}" alt="">
-                <h2>Ovqatlanish vaqtlari</h2>
-                <h5>5 mahal ovqatlanish
-                    <br>
-                    Bepul
-                </h5>
-
-            </div>
-
-        </div>
-        <div class="inform-items">
-            <img src="{% static 'img/l-2.jpg' %}" alt="">
-            <div class="inform-items-title">
-                <img src="{% static 'img/forma.svg' %}" alt="">
-                <h2>Maktab formasi</h2>
+                <img src="{{ malumot.rasm.url }}" alt="">
+                <h2>{{ malumot.sarlavha }}</h2>
+                {% if malumot.bepul %}
                 <h5>Bepul</h5>
-
+                {% else %}
+                <h5>Pullik</h5>
+                {% endif %}
             </div>
-
         </div>
-        <div class="inform-items">
-            <img src="{% static 'img/l-3.jpg' %}" alt="">
-            <div class="inform-items-title">
-                <img src="{% static 'img/yot.svg' %}" alt="">
-                <h2>Maktab yotoqxonasi</h2>
-                <h5>
-                    Bepul
-                </h5>
-
-            </div>
-
-        </div>
+        {% endfor %}
     </div>
 </section>
 
