@@ -6,7 +6,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('bosh_sahifa/', bosh_sahifa),
-    path('yangliklar/', yangliklar),
+    path('yangiliklar/', yangiliklar),
     path('media/', maktab_hayoti),
     path('jurnal/', journal),
     path('jurnalitem/', journalitems),

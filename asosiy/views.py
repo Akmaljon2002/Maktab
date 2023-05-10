@@ -3,7 +3,7 @@ from django.shortcuts import render
 def bosh_sahifa(request):
     return render(request, 'index.html')
 
-def yangliklar(request):
+def yangiliklar(request):
     return render(request, 'news.html')
 
 def maktab_hayoti(request):
