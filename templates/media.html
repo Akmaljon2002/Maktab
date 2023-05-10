@@ -8,33 +8,12 @@
             
 
             <div class="news__items-media medias" data-aos="fade-up">
+                {% for i in medialar %}
                 <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
+                    <img src="{{ i.rasm.url }}" alt="">
+                    <p style="text-align: center;">{{ i.sarlavha }}</p>
                 </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
-                <div class="medias__img ">
-                    <img src="./img/l-2.jpg" alt="">
-                </div>
+                {% endfor %}
             </div>
         </div>
 
