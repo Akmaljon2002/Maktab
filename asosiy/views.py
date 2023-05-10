@@ -15,3 +15,4 @@ class YangilikDetailView(View):
             "yangilik":Yangiliklar.objects.get(id=pk)
         }
         return render(request, 'newsTitle.html', data)
+from django.shortcuts import render
