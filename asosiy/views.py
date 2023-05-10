@@ -16,10 +16,10 @@ def journalitems(request):
     return render(request, 'journalItems.html')
 
 def statistika(request):
-    return render(request, 'Room.html')
+    return render(request, 'Statistics/Room.html')
 
 def puplis(request):
-    return render(request, 'puplis.html')
+    return render(request, 'Statistics/puplis.html')
 
 def contact(request):
     return render(request, 'Contact.html')
