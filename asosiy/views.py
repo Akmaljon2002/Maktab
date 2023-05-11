@@ -119,9 +119,28 @@ class Contact2View(View):
         )
         return redirect('/contact2/')
 
+
+class StatsRoomView(View):
+    def get(self, request):
+        # if request.user.is_authenticated:
+            return render(request, 'Statistics/Room.html')
+
+
+class StatsPuplisView(View):
+    def get(self, request):
+        # if request.user.is_authenticated:
+            return render(request, 'Statistics/puplis.html')
+
+
 class JournalView(View):
     def get(self, request):
         if request.user.is_authenticated:
             return render(request, 'journal.html')
+        return redirect('/home/')
+
+class JournalItemsView(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            return render(request, 'journalItems.html')
         return redirect('/home/')
 
