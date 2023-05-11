@@ -46,3 +46,7 @@ class ContactView(View):
         )
         return redirect('/contact/')
 
+class JournalView(View):
+    def get(self, request):
+        return render(request, 'journal.html')
+

@@ -13,5 +13,6 @@ urlpatterns = [
 
     path('media/', MediaView.as_view()),
     path('contact/', ContactView.as_view()),
+    path('journal/', JournalView.as_view()),
     path('', HomeView.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -37,7 +37,7 @@
                 </a></li>
                 <li><a href="/media/">Maktab hayoti
                 </a></li>
-                <li><a href="./journal.html">Jurnal
+                <li><a href="/journal/">Jurnal
                 </a></li>
                 <li><a href="./Statistics/Room.html">Statistika
                 </a></li>
@@ -101,9 +101,9 @@
     <div class="miniNews__title">
         {% for i in songgilari %}
         <div class="card card--14">
-            <h2 class="card__title">{{ i.sarlavha }}</h2>
+            <h2 class="card__title">{{ i.sarlavha|slice:":25" }}...</h2>
             <img class="card__img" src="{{ i.rasm.url }}" alt="">
-            <p class="card__text">{{ i.matn }}</p>
+            <p class="card__text">{{ i.matn|slice:":50" }}...</p>
             <a class="card__btn" href="/new/{{ i.id }}/" class="">read</a>
         </div>
         {% endfor %}
