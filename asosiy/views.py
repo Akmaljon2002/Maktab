@@ -30,3 +30,5 @@ class HomeView(View):
             'malumotlar': Malumot.objects.all()
         }
         return render(request, 'index.html', data)
+
+# O'zgardimi
