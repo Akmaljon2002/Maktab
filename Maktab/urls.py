@@ -9,10 +9,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('news/', YangiliklarView.as_view()),
+    path('news2/', Yangiliklar2View.as_view()),
     path('new/<int:pk>/', YangilikDetailView.as_view()),
 
     path('media/', MediaView.as_view()),
+    path('media2/', Media2View.as_view()),
     path('contact/', ContactView.as_view()),
+    path('contact2/', Contact2View.as_view()),
     path('journal/', JournalView.as_view()),
+    path('home/', Home2View.as_view()),
+    path('logout/', LogoutView.as_view()),
     path('', HomeView.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

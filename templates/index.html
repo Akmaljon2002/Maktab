@@ -45,9 +45,9 @@
             </ul>
         </nav>
         <div class="head__menu-join">
-            <div class="but">
-                <img src="{% static 'img/user-128.png' %}" alt="">
-            </div>
+<!--            <div class="but">-->
+<!--                <img src="{% static 'img/user-128.png' %}" alt="">-->
+<!--            </div>-->
             <form class="drop-down">
                 <select title="Select your surfboard" class="selectpicker">
                     <option data-thumbnail="{% static 'img/UzbFleg.png' %}">
@@ -55,6 +55,7 @@
                     </option>
                     <option data-thumbnail="{% static 'img/Russia Flag.png' %}">Eng</option>
                 </select>
+                <a href="/logout" class="btn btn-sm btn-outline-danger">Chiqish</a>
             </form>
 
         </div>
@@ -72,29 +73,31 @@
     </div>
 
 </section>
-<div class="regst regst__top">
-    <span class="close">X</span>
+<!--<form method="post">{% csrf_token %}-->
+<!--    <div class="regst regst__top">-->
+<!--        <span class="close">X</span>-->
 
-    <div class="regst__inp">
-        <div class="regst__inp-log forma">
-            <label for="name">Login</label>
-            <input type="text" placeholder="login" name="name">
-        </div>
-        <div class="regst__inp-pas forma">
-            <label for="pasword">Parol</label>
-            <input type="password" name="pasword" id="" placeholder="Parol">
-        </div>
-        <div class="regst__inp-btn">
-            <div class="chekout">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Eslab qolish</label>
-            </div>
-            <button type="submit" class="btn btn-primary ">Kirish</button>
-        </div>
-    </div>
-
-
-</div>
+<!--        <div class="regst__inp">-->
+<!--        <div class="regst__inp-log forma">-->
+<!--            <label for="l">Login</label>-->
+<!--            <input type="text" placeholder="login" name="l">-->
+<!--        </div>-->
+<!--        <div class="regst__inp-pas forma">-->
+<!--            <label for="p">Parol</label>-->
+<!--            <input type="password" name="p" placeholder="parol">-->
+<!--        </div>-->
+<!--        <div class="regst__inp-btn">-->
+<!--            <div class="chekout">-->
+<!--                <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--                <label class="form-check-label" for="exampleCheck1">Eslab qolish</label>-->
+<!--            </div>-->
+<!--            <div class="d-flex justify-content-between align-items-center">-->
+<!--                <button type="submit" class="btn btn-primary mr-2">Kirish</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</form>-->
 
 <section class="miniNews container">
     <h1>So'nggi yangiliklar</h1>
@@ -130,8 +133,6 @@
         {% endfor %}
     </div>
 </section>
-
-
 
 
 <div class="regst">
@@ -228,11 +229,15 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+<script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
         crossorigin="anonymous"></script>
 <script src="{% static 'js/app.js' %}"></script>
 <script>
         AOS.init();
+
+
+
 
 
 </script>

@@ -1,0 +1,76 @@
+{% extends 'header2.html' %}
+{% block content %}
+
+<section class="contact">
+
+    <div class="contact__title">
+        <div class="contact__title-items">
+
+            <h4 class="pages">Manzil: Farg'ona shahar Qashqar ko'chasi 1-uy
+            </h4>
+            <div class="contact__title-items-transp">
+                <h4><b>Jamoat transporti yo`nalishlari:</b></h4>
+                <h4>Avtobus: 6A, 6B, 20, 28</h4>
+            </div>
+            <div class="contact__title-items-aloqa">
+                <h4>Telefon: <a href="#">+998 (73) 249-25-10</a></h4>
+                <h4>Elektron pochta: <a href="#">info@piima.uz</a></h4>
+            </div>
+        </div>
+        <form method="post">{%csrf_token%}
+        <div class="contact__title-inp">
+            <h2>Murojaatlarni Yuborish</h2>
+            <div class="card-body mb-4">
+                <div class="row">
+                    <div class="col-6 pr-1">
+                        <input type="text" name="name" class="form-control" placeholder="Ismingiz">
+                    </div>
+                    <div class="col-6 pl-1">
+                        <input type="text" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" name="phone" class="form-control" placeholder="Telefon raqamingiz">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" name="subject" class="form-control" placeholder="Sarlavha">
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" name="message" id="message" rows="4" required=""
+                                  placeholder="Xabar"></textarea>
+                    </div>
+                    <div class="col-12 mt-3 mb-2">
+                        <script src="https://www.google.com/recaptcha/api.js?hl=uz" async="" defer=""></script>
+                        <div class="g-recaptcha" theme="light" id="buzzNoCaptchaId_2d1cb44ccb3cde4082fc43c421cca7d1"
+                             data-sitekey="6LfdDAoaAAAAANQw5ID7yx3ZWyYUtc5wNhju44fF">
+                            <div style="width: 304px; height: 78px;">
+                                <div>
+                                    <iframe title="reCAPTCHA"
+                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfdDAoaAAAAANQw5ID7yx3ZWyYUtc5wNhju44fF&amp;co=aHR0cHM6Ly9wb3J0YWwucGlpbWEudXo6NDQz&amp;hl=ru&amp;v=Km9gKuG06He-isPsP6saG8cn&amp;size=normal&amp;cb=g2gmba414he0"
+                                            width="304" height="78" role="presentation" name="a-8shtpf4mpciv"
+                                            frameborder="0" scrolling="no"
+                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                </div>
+                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                          class="g-recaptcha-response"
+                                          style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                            </div>
+                            <iframe style="display: none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row contact__btn">
+        <div class="col-12 text-right">
+            <button class="btn btn-more m-0" type="submit">
+                Yuborish
+            </button>
+        </div>
+    </div>
+    </form>
+</section>
+
+{% endblock %}

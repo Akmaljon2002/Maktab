@@ -1,0 +1,23 @@
+{% extends 'header2.html' %}
+{% block content %}
+
+
+    <section class="news">
+        
+        <div class="news__items container">
+            
+
+            <div class="news__items-media medias" data-aos="fade-up">
+                {% for i in medialar %}
+                <div class="medias__img ">
+                    <img src="{{ i.rasm.url }}" alt="">
+                    <p style="text-align: center;">{{ i.sarlavha }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}

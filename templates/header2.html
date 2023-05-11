@@ -37,17 +37,13 @@
                 </a></li>
                 <li><a href="/media/">Maktab hayoti
                 </a></li>
-                <li><a href="/journal/">Jurnal
-                </a></li>
-                <li><a href="./Statistics/Room.html">Statistika
-                </a></li>
                 <li><a href="/contact/">Aloqa</a></li>
             </ul>
         </nav>
         <div class="head__menu-join">
-<!--            <div class="but">-->
-<!--                <img src="{% static 'img/user-128.png' %}" alt="">-->
-<!--            </div>-->
+            <div class="but">
+                <img src="{% static 'img/user-128.png' %}" alt="">
+            </div>
             <form class="drop-down">
                 <select title="Select your surfboard" class="selectpicker">
                     <option data-thumbnail="{% static 'img/UzbFleg.png' %}">
@@ -55,7 +51,6 @@
                     </option>
                     <option data-thumbnail="{% static 'img/Russia Flag.png' %}">Eng</option>
                 </select>
-                <a href="/logout" class="btn btn-sm btn-outline-danger">Chiqish</a>
             </form>
 
         </div>
@@ -70,27 +65,27 @@
 {% endblock %}
 
 
-<div class="regst">
+<div class="regst regst__top">
     <span class="close">X</span>
-
-    <div class="regst__inp">
-        <div class="regst__inp-log forma">
-            <label for="name">Login</label>
-            <input type="text" placeholder="login" name="name">
-        </div>
-        <div class="regst__inp-pas forma">
-            <label for="pasword">Parol</label>
-            <input type="password" name="pasword" id="" placeholder="Parol">
-        </div>
-        <div class="regst__inp-btn">
-            <div class="chekout">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Eslab qolish</label>
+    <form method="post">{% csrf_token %}
+        <div class="regst__inp">
+            <div class="regst__inp-log forma">
+                <label for="l">Login</label>
+                <input type="text" placeholder="login" name="l">
             </div>
-            <button type="submit" class="btn btn-primary ">Kirish</button>
+            <div class="regst__inp-pas forma">
+                <label for="p">Parol</label>
+                <input type="password" name="p" placeholder="parol">
+            </div>
+            <div class="regst__inp-btn">
+                <div class="chekout">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Eslab qolish</label>
+                </div>
+                <button type="submit" class="btn btn-primary ">Kirish</button>
+            </div>
         </div>
-    </div>
-
+    </form>
 
 </div>
 
@@ -169,6 +164,7 @@
 <script src="{% static 'js/app.js' %}"></script>
 <script>
         AOS.init();
+
 
 
 </script>

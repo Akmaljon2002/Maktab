@@ -1,0 +1,32 @@
+{% extends 'header2.html' %}
+{% block content %}
+
+
+<section class="news">
+    <div class="news__items container">
+        <div class="news__items-first novelty row" data-aos="fade-left">
+            {% for yangilik in yangiliklar %}
+            <div class="novelty__items col-xl-6  ">
+                <div class="novelty__items-img">
+                    <img src="{{yangilik.rasm.url}}" alt="">
+                </div>
+                <div class="novelty__items-title">
+                    <h2>{{yangilik.sarlavha}}</h2>
+                    <h6>{{yangilik.sana}}</h6>
+                    <a href="/new/{{yangilik.id}}/" class="btn">
+                        Batafsil
+                    </a>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}
