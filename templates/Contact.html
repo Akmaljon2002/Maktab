@@ -16,8 +16,8 @@
                 <h4>Telefon: <a href="#">+998 (73) 249-25-10</a></h4>
                 <h4>Elektron pochta: <a href="#">info@piima.uz</a></h4>
             </div>
-
         </div>
+        <form method="post">{%csrf_token%}
         <div class="contact__title-inp">
             <h2>Murojaatlarni Yuborish</h2>
             <div class="card-body mb-4">
@@ -65,11 +65,12 @@
     </div>
     <div class="row contact__btn">
         <div class="col-12 text-right">
-            <button class="btn btn-more m-0">
+            <button class="btn btn-more m-0" type="submit">
                 Yuborish
             </button>
         </div>
     </div>
+    </form>
 </section>
 
 {% endblock %}

@@ -12,5 +12,6 @@ urlpatterns = [
     path('new/<int:pk>/', YangilikDetailView.as_view()),
 
     path('media/', MediaView.as_view()),
+    path('contact/', ContactView.as_view()),
     path('', HomeView.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

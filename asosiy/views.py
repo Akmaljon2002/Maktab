@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from .models import *
 
@@ -30,4 +30,19 @@ class HomeView(View):
             'malumotlar': Malumot.objects.all()
         }
         return render(request, 'index.html', data)
+
+
+class ContactView(View):
+    def get(self, request):
+        return render(request, 'Contact.html')
+
+    def post(self, request):
+        Murojat.objects.create(
+            ism = request.POST.get('name'),
+            email = request.POST.get('email'),
+            tel = request.POST.get('phone'),
+            sarlavha = request.POST.get('subject'),
+            xabar = request.POST.get('message')
+        )
+        return redirect('/contact/')
 
