@@ -31,4 +31,3 @@ class HomeView(View):
         }
         return render(request, 'index.html', data)
 
-# O'zgardimi
