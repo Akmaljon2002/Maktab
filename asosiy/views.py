@@ -43,9 +43,9 @@ class Yangiliklar2View(View):
         user = authenticate(username= request.POST.get('l'),
                             password = request.POST.get('p'))
         if user is None:
-            return redirect('/home/')
+            return redirect('/news2/')
         login(request, user)
-        return redirect('/')
+        return redirect('/news/')
 
 class YangiliklarView(View):
     def get(self, request):
@@ -82,9 +82,9 @@ class Media2View(View):
         user = authenticate(username= request.POST.get('l'),
                             password = request.POST.get('p'))
         if user is None:
-            return redirect('/home/')
+            return redirect('/media2/')
         login(request, user)
-        return redirect('/')
+        return redirect('/media/')
 
 
 class ContactView(View):
@@ -110,14 +110,23 @@ class Contact2View(View):
         return render(request, 'Contact2.html')
 
     def post(self, request):
-        Murojat.objects.create(
-            ism = request.POST.get('name'),
-            email = request.POST.get('email'),
-            tel = request.POST.get('phone'),
-            sarlavha = request.POST.get('subject'),
-            xabar = request.POST.get('message')
-        )
-        return redirect('/contact2/')
+        if request.POST.get('l') is None:
+            Murojat.objects.create(
+                ism = request.POST.get('name'),
+                email = request.POST.get('email'),
+                tel = request.POST.get('phone'),
+                sarlavha = request.POST.get('subject'),
+                xabar = request.POST.get('message')
+            )
+            return redirect('/contact2/')
+        else:
+            user = authenticate(username=request.POST.get('l'),
+                                password=request.POST.get('p'))
+            if user is None:
+                return redirect('/contact2/')
+            login(request, user)
+            return redirect('/contact/')
+
 
 
 class StatsRoomView(View):
