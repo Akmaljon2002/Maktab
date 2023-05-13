@@ -141,11 +141,24 @@ class StatsPuplisView(View):
             return render(request, 'Statistics/puplis.html')
 
 
-class JournalView(View):
-    def get(self, request):
+class JournalSinfView(View):
+    def get(self, request, pk):
         if request.user.is_authenticated:
-            return render(request, 'journal.html')
+            sinflar = Sinf.objects.filter(id_sinf=pk)
+            for sinf in sinflar:
+                fanlar = sinf.fan.all()
+            data = {
+                "fanlar":fanlar
+            }
+            return render(request, 'journal.html', data)
         return redirect('/home/')
+
+# class JournalView(View):
+#     def get(self, request):
+#         if request.user.is_authenticated:
+#             return render(request, 'journal.html')
+#         return redirect('/home/')
+
 
 class JournalItemsView(View):
     def get(self, request):

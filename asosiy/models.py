@@ -1,17 +1,24 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+class Fanlar(models.Model):
+    nom = models.CharField(max_length=50)
+    def __str__(self):
+        return self.nom
+
 class Oqituvchi(models.Model):
     fish = models.CharField(max_length=60)
-    fan = models.CharField(max_length=50)
+    fan = models.ManyToManyField(Fanlar)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.fish
 
 class Sinf(models.Model):
+    id_sinf = models.PositiveSmallIntegerField(null=True, blank=True)
     bosqich = models.PositiveSmallIntegerField()
     rang = models.CharField(max_length=20)
     kurator = models.ForeignKey(Oqituvchi, on_delete=models.CASCADE)
+    fan = models.ManyToManyField(Fanlar)
     def __str__(self):
         return f"{self.bosqich}-{self.rang}"
 
@@ -63,3 +70,4 @@ class Murojat(models.Model):
     xabar = models.TextField()
     def __str__(self):
         return f"{self.ism}({self.email})"
+

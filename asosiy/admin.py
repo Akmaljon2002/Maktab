@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import *
 
 admin.site.register(Oqituvchi)
+admin.site.register(Fanlar)
 admin.site.register(Oquvchi)
 admin.site.register(Sinf)
 admin.site.register(Yangiliklar)

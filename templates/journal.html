@@ -46,9 +46,9 @@
             </ul>
         </nav>
         <div class="head__menu-join">
-<!--            <div class="but">-->
-<!--                <img src="{% static 'img/user-128.png' %}" alt="">-->
-<!--            </div>-->
+            <!--            <div class="but">-->
+            <!--                <img src="{% static 'img/user-128.png' %}" alt="">-->
+            <!--            </div>-->
             <form class="drop-down">
                 <select title="Select your surfboard" class="selectpicker">
 
@@ -105,7 +105,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="/journal/1000/#" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     5-Green
                                 </a>
@@ -117,7 +117,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#u sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="/journal/1001/#">
                                     5-Blue
                                 </a>
 
@@ -136,7 +136,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="6-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     6-Green
                                 </a>
@@ -148,7 +148,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#nfning jurnallarini ochish">
+                                <a onclick="journal()" href="6-b">
                                     6-Blue
                                 </a>
 
@@ -168,7 +168,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="7-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     7-Green
                                 </a>
@@ -180,7 +180,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" title="Ushbu sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="7-b" title="Ushbu sinfning jurnallarini ochish">
                                     7-Blue
                                 </a>
 
@@ -199,7 +199,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="8-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     8-Green
                                 </a>
@@ -211,7 +211,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" title="Ushbu sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="8-b" title="Ushbu sinfning jurnallarini ochish">
                                     8-Blue
                                 </a>
 
@@ -230,7 +230,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="9-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     9-Green
                                 </a>
@@ -242,7 +242,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" title="Ushbu sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="9-b" title="Ushbu sinfning jurnallarini ochish">
                                     9-Blue
                                 </a>
 
@@ -260,7 +260,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="10-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     10-Green
                                 </a>
@@ -272,7 +272,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" title="Ushbu sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="10-b" title="Ushbu sinfning jurnallarini ochish">
                                     10-Blue
                                 </a>
 
@@ -290,7 +290,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" class="green"
+                                <a onclick="journal()" href="11-g" class="green"
                                    title="Ushbu sinfning jurnallarini ochish">
                                     11-Green
                                 </a>
@@ -302,7 +302,7 @@
                         <li>
                             <div>
 
-                                <a onclick="journal()" href="#" title="Ushbu sinfning jurnallarini ochish">
+                                <a onclick="journal()" href="11-b" title="Ushbu sinfning jurnallarini ochish">
                                     11-Blue
                                 </a>
 
@@ -323,12 +323,9 @@
                             data-href="/reports/default.aspx?school=1000011390627&amp;report=subjectAverageMarks&amp;year=2022">
 
                         <option disabled="disabled" selected="selected" style="display:none;">Fanni tanlang</option>
-                        <option value="1935067102766191703">Adabiyot</option>
-                        <option value="1935067102766191712" selected="selected">Algebra</option>
-                        <option value="1935067102766191726">Astranomiya</option>
-                        <option value="1935067102766191723">Biologiya</option>
-                        <option value="1935067102766191734">Chaqiruvga qadar boshlangʼich tayyorgarlik</option>
-                        <option value="1935067102766191717">Davlat va huquq asoslari</option>
+                        {% for fan in fanlar %}
+                        <option value="{{fan.id}}">{{fan.nom}}</option>
+                        {% endfor %}
 
                     </select>
                 </div>
@@ -362,6 +359,7 @@
 <script src="{% static 'js/app.js' %}"></script>
 <script>
         AOS.init();
+
 
 </script>
 </body>
