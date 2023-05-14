@@ -146,7 +146,7 @@ class JournalSinfView(View):
         if request.user.is_authenticated:
             sinflar = Sinf.objects.filter(id_sinf=pk)
             for sinf in sinflar:
-                fanlar = sinf.fan.all()
+                fanlar = sinf.fan.filter(oqituvchi__user=request.user)
             data = {
                 "fanlar":fanlar
             }

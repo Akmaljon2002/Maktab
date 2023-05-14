@@ -1,17 +1,18 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-class Fanlar(models.Model):
-    nom = models.CharField(max_length=50)
-    def __str__(self):
-        return self.nom
-
 class Oqituvchi(models.Model):
     fish = models.CharField(max_length=60)
-    fan = models.ManyToManyField(Fanlar)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     def __str__(self):
         return self.fish
+
+class Fanlar(models.Model):
+    nom = models.CharField(max_length=50)
+    oqituvchi = models.ManyToManyField(Oqituvchi)
+    def __str__(self):
+        return self.nom
+
 
 class Sinf(models.Model):
     id_sinf = models.PositiveSmallIntegerField(null=True, blank=True)
